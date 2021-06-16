@@ -7,7 +7,7 @@ Class database{
     private $database;
     private $dbh;
 
-        function__construct(){
+        function __construct(){
             $this->host = 'localhost';
             $this->username = 'root';
             $this->password = '';
@@ -19,7 +19,7 @@ Class database{
                 PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
                 PDO::ATTR_EMULATE_PREPARES   => false,
-];
+            ];
 
             try {
              $this->dbh = new PDO($dsn, $this->username, $this->password, $options);
